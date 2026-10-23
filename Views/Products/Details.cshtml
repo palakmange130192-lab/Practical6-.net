@@ -1,0 +1,33 @@
+﻿@model prac6.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Product Details</title>
+</head>
+<body>
+    <h2>Product Details</h2>
+
+    <p><b>Id:</b> @Model.Id</p>
+    <p><b>Name:</b> @Model.Name</p>
+    <p><b>Description:</b> @Model.Description</p>
+    <p><b>Price:</b> @Model.Price</p>
+    <p><b>Category:</b> @Model.Category</p>
+
+    <p><b>Product Image:</b></p>
+    <img src="~/images/@Model.Image"
+         width="250"
+         height="250"
+         alt="@Model.Name" />
+
+    <br />
+    <br />
+
+    <a asp-controller="Product" asp-action="List">Back to Product List</a>
+</body>
+</html>
